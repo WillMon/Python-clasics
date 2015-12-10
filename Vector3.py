@@ -15,6 +15,7 @@ class Vector3(object):
 		TempVariable.x = self.x + UserInput.x
 		TempVariable.y = self.y + UserInput.y
 		TempVariable.z = self.z + UserInput.z
+		return TempVariable
 		
 	def sub(self, UserInput):
 		TempVariable = Vector3()
@@ -32,9 +33,9 @@ class Vector3(object):
 		
 	def CrossPro(self, UserInput):
 		TempVariable = Vector3()
-		TempVariable.x = (self.x * UserInput.z) - (self.z * UserInput.y)
+		TempVariable.x = (self.y * UserInput.z) - (self.z * UserInput.y)
 		TempVariable.y = (self.z * UserInput.x) - (self.x * UserInput.z)
-		TempVariable.z = (self.x * UserInput.v) - (self.y * UserInput.x)
+		TempVariable.z = (self.x * UserInput.y) - (self.y * UserInput.x)
 		return TempVariable
 		
 	def LinerIntro(self, UserInput):
